@@ -33,11 +33,11 @@ body {
 
 .flowers {
   position: absolute;
-  right: 30%;
+  left: 50%;
   bottom: 0;
-  transform: scale(0.9);
- 
+  transform: translateX(-50%) scale(0.9);
 }
+
 
 
 .flower {
@@ -1319,29 +1319,30 @@ body {
     transform: scale(0);
   }
 }
-.container * {
-  -webkit-animation-play-state: paused !important;
-          animation-play-state: paused !important;
-}/*# sourceMappingURL=main.css.map */
 
-
-.pesan {
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  transform: none;
-  text-align: left;
-  color: #aee4f7;
-  font-size: 2rem;
-  font-weight: 600;
-  text-shadow: 0 0 8px #00f0ff, 0 0 16px #00f0ff;
-  z-index: 10;
-  max-width: 50%;
-  white-space: normal;  /* Allow text to wrap into new lines */
-  overflow: hidden;
+/* === POPUP PESAN SAAT BUNGA DIKLIK === */
+.popup-message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(125, 7, 244, 0.95);
+  color: #121111;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00f0ff;
   opacity: 0;
-  animation: typing 5s steps(30) 1s forwards, fadeIn 2s forwards 5s, moveDown 6s ease-in-out forwards, blink 0.75s step-end infinite;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+  pointer-events: none;
 }
+
+.popup-message.show {
+  opacity: 1;
+}
+
 
 @keyframes typing {
   0% { width: 0; }
@@ -1372,12 +1373,5 @@ body {
   50% { border-color: transparent; }
 }
 
-
 @media screen and (max-width: 600px) {
-  .pesan {
-    font-size: 1.2rem;
-    top: 8%;
-  }
 }
-
-
