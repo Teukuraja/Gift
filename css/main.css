@@ -1323,7 +1323,7 @@ body {
 /* === POPUP PESAN SAAT BUNGA DIKLIK === */
 .popup-message {
   position: fixed;
-  top: 20px; /* Ganti dari bottom: 20px; jadi top biar naik */
+  top: 20%; /* Ganti dari bottom: 20px; jadi top biar naik */
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(125, 7, 244, 0.95);
