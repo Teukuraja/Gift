@@ -1323,24 +1323,25 @@ body {
 /* === POPUP PESAN SAAT BUNGA DIKLIK === */
 .popup-message {
   position: fixed;
-  bottom: 100px; /* ubah dari 20px */
+  top: 15%; /* Ganti dari bottom: 20px; jadi top biar naik */
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(125, 7, 244, 0.95);
   color: #121111;
-  padding: 10px 16px; /* diperkecil agar tidak menutupi bunga */
+  padding: 12px 20px;
   border-radius: 20px;
-  font-size: 1rem; /* diperkecil untuk HP */
+  font-size: 1rem; /* Lebih kecil biar tidak numpuk */
   font-weight: bold;
   box-shadow: 0 0 10px #00f0ff;
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 9999;
   pointer-events: none;
-  max-width: 80%; /* biar ga terlalu lebar */
-  text-align: center; /* biar rapi tengah */
-  word-break: break-word; /* biar teks ga overflow */
+  max-width: 80vw; /* Tambahkan: supaya tidak sempit */
+  text-align: center; /* Tambahkan: teks rata tengah */
+  word-break: break-word; /* Tambahkan: biar kata panjang tidak keluar */
 }
+
 
 .popup-message.show {
   opacity: 1;
